@@ -1,9 +1,9 @@
 import { Hono } from 'hono'
-import {get_todos} from "./main.js"
+import {get_todos} from "./getTodos.js"
 
 const app = new Hono()
 
-app.get("/", async(c)=>{
+app.get("*", async(c)=>{
   return c.redirect("/todos")
 })
 
